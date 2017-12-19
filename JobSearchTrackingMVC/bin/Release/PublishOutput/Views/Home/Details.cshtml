@@ -1,0 +1,181 @@
+﻿@model JobSearchTrackingMVC.Models.JSTrackingViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JSTrackingViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.Company)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.Company.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Company.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Company.Website)
+            </dt>
+
+            <dd>
+                <a href=@Model.Company.Website>
+                    @Html.DisplayFor(model => model.Company.Website)
+                </a>
+            </dd>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.Location)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.Location.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Location.Description)
+            </dd>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.JSTrackingID)
+            </legend>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.JobDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.JobDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SourcePosting)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SourcePosting)
+            </dd>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.Contact)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.Contact.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contact.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contact.EmailAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contact.EmailAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Contact.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Contact.PhoneNumber)
+            </dd>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.FollowUp1)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.FollowUp1.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FollowUp1.Type)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FollowUp1.FollowUpDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FollowUp1.FollowUpDate)
+            </dd>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.FollowUp2)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.FollowUp2.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FollowUp2.Type)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FollowUp2.FollowUpDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FollowUp2.FollowUpDate)
+            </dd>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>
+                @Html.DisplayNameFor(model => model.JSTrackingID)
+            </legend>
+            <dt>
+                @Html.DisplayNameFor(model => model.ResumeDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ResumeDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.InterviewDateTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.InterviewDateTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+        </fieldset>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JSTrackingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

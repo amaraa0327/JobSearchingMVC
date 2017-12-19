@@ -1,0 +1,106 @@
+﻿@model IEnumerable<JobSearchTrackingMVC.Models.JSTrackingViewModel>
+
+@{
+    ViewBag.Title = "WithInterview";
+}
+
+<h2>WithInterview</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.Website)
+        </th>
+        <th style="width: 50%;">
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SourcePosting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumeDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FollowUp1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FollowUp2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterviewDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.Website)
+            </td>
+            <td class="col-sm-5">
+                @Html.DisplayFor(modelItem => item.JobDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SourcePosting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResumeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowUp1.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowUp2.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterviewDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.JSTrackingID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.JSTrackingID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.JSTrackingID })
+            </td>
+        </tr>
+    }
+
+</table>
